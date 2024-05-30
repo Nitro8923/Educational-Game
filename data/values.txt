@@ -1,0 +1,13 @@
+first_time
+started_decryption
+hard_mode
+decryption_layer1
+decryption_layer2
+decryption_layer3
+decryption_layer4
+decryption_layer5
+hard_decryption_layer1
+hard_decryption_layer2
+hard_decryption_layer3
+hard_decryption_layer4
+hard_decryption_layer5
