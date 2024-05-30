@@ -13,12 +13,12 @@ def print_blank_wall(size=100):
     for i in range(size):
         print()
 
-def processing(string, num_dots=25, delay=False, delay_min=0.1, delay_max=0.1, loading_char='.'):
+def processing(string, num_chars=25, random_delay=False, delay_min=0.1, delay_max=0.1, loading_char='.'):
     print(string, end="", flush=True)
     
-    for i in range(num_dots):
+    for i in range(num_chars):
         print(loading_char, end="", flush=True)
-        if delay == True:
+        if random_delay == True:
             delay_time = random.uniform(delay_min, delay_max)
         else:
             delay_time = delay_min

@@ -15,7 +15,7 @@ def ransomware_startup():
         gprint("Wallet ID: ", end="")
         input()
         
-        gprint()
+        print()
         gprint("Your wallet doesn't have enough bitcoin.")
     
     write_value("data/save_values/started_decryption.txt", "1")
@@ -25,7 +25,15 @@ def hard_mode():
     print()
 
     gprint("You have a pirated decryption software from a russian website")
-    choice("Do you use it? y/n: ")
+    if choice("Do you use it? y/n: ") == 'y':
+        write_value("data/save_values/hard_mode", "1")
 
 def started_decryption():
-    gprint("")
+    hard_mode()
+    gprint("You just got off the phone with your brother")
+    gprint("He just sent over a .zip file")
+    gprint("You extract it")
+
+    print()
+    print()
+    processing(message="Extracting progress: ", num_chars=20, random_delay=True, delay_min=0.01, delay_max=0.05, loading_char='.')
