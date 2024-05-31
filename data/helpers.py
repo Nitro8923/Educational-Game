@@ -2,7 +2,7 @@ import time
 import random
 import os
 
-def gprint(string, speed=0.03, end="\n"):
+def gprint(string="", speed=0.03, end="\n"):
     for character in string:
         print(character, end="", flush=True)
         time.sleep(speed)
@@ -26,15 +26,21 @@ def processing(string, num_chars=25, random_delay=False, delay_min=0.1, delay_ma
         time.sleep(delay_time)
     print()
 
-def choice(message, accepted_choices={'y', 'n'}, gprint=False):
+def choice(message, accepted_choices={'y', 'n'}, gprint=False, reminder=False, reminder_message=""):
     while True:
         if gprint == True:
-            gprint(message + ": ", end="")
+            gprint(message, end="")
         else:
-            print(message + ": ", end="")
+            print(message, end="")
         answer = input()
+
         if answer in accepted_choices:
             return answer;
+        elif reminder == True:
+            if gprint == True:
+                gprint(reminder_message)
+            else:
+                print(reminder_message)
 
 def read_value(file):
     with open(file, "r") as file:
