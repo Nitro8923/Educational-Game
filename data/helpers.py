@@ -26,9 +26,9 @@ def processing(message, num_chars=25, random_delay=False, delay_min=0.1, delay_m
         time.sleep(delay_time)
     print()
 
-def choice(message, accepted_choices={'y', 'n'}, gprint=False, reminder=False, reminder_message=""):
+def choice(message="", accepted_choices={'y', 'n'}, use_gprint=False, reminder=False, reminder_message=""):
     while True:
-        if gprint == True:
+        if use_gprint == True:
             gprint(message, end="")
         else:
             print(message, end="")
