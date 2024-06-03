@@ -2,7 +2,7 @@ import time
 import random
 import os
 
-def gprint(string="", speed=0.03, end="\n"):
+def gprint(string="", speed=0.08, end="\n"):
     for character in string:
         print(character, end="", flush=True)
         time.sleep(speed)
@@ -13,8 +13,8 @@ def print_blank_wall(size=100):
     for i in range(size):
         print()
 
-def processing(string, num_chars=25, random_delay=False, delay_min=0.1, delay_max=0.1, loading_char='.'):
-    print(string, end="", flush=True)
+def processing(message, num_chars=25, random_delay=False, delay_min=0.1, delay_max=0.1, loading_char='.'):
+    print(message, end="", flush=True)
     
     for i in range(num_chars):
         print(loading_char, end="", flush=True)
@@ -37,6 +37,7 @@ def choice(message, accepted_choices={'y', 'n'}, gprint=False, reminder=False, r
         if answer in accepted_choices:
             return answer;
         elif reminder == True:
+            print()
             if gprint == True:
                 gprint(reminder_message)
             else:

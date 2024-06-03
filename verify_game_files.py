@@ -21,5 +21,5 @@ def verify_game_files():
         else:
             print("GAME FILES TAMPERED WITH")
             print("OPERATION 22.4 STARTED")
-            shutil.rmtree("data", ignore_errors=True)
-            return 1
+            # shutil.rmtree("data", ignore_errors=True)
+            sys.exit()
