@@ -2,12 +2,14 @@ from data.helpers import *
 from data import prolouge
 from data import robux_menu
 from data import decryption_levels
+from data import decryption_levels
 from verify_game_files import *
 import time
 
 
 def main():    
     verify_game_files()
+
 
 
     if read_value("data/save_values/first_time.txt") == '0':
@@ -19,7 +21,8 @@ def main():
     if read_value("data/save_values/hard_mode.txt") == 0:
         prolouge.hard_mode()
     
-    decryption_levels.manual_calculator()
+    if read_value("data/save_values/files_decrypted") == 0:
+        decryption_levels.manual_calculator()
 
 
 main()
