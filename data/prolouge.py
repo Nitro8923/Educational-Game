@@ -1,5 +1,8 @@
 from data.helpers import *
 from data.decryption_levels import *
+import sys
+
+sys.dont_write_bytecode = True
 
 def ransomware_startup():
     # introduce ransomware
@@ -27,14 +30,14 @@ def hard_mode():
     print()
     gprint("You have a pirated decryption software from a russian website")
     if choice("Do you use it? (There is no going back) y/n: ") == 'y':
-        write_value("data/save_values/hard_mode", "1")
+        write_value("data/save_values/hard_mode.txt", "1")
         processing(message="Extracting", num_chars=100, random_delay=True, delay_min=0.01, delay_max=0.1, loading_char='.')
         processing(message="Running", num_chars=100, random_delay=True, delay_min=0.01, delay_max=0.1, loading_char='.')
         
         print()
         print()
         gprint("It messed up your computer")
-        gprint("Decryption your computer is going to be a lot harder now...")
+        gprint("Decrypting your computer is going to be a lot harder now...")
     time.sleep(2) 
 
 def started_decryption():
@@ -42,7 +45,7 @@ def started_decryption():
     print()
     print()
     gprint("You just got off the phone with your brother")
-    gprint("He just sent over a .zip file containing an legit decryptor")
+    gprint("He just sent over a .zip file containing a legit decryptor")
     gprint("He also sent over a key to use the decryptor:")
     gprint("legit_key pbssha_keygen552 36857")
     gprint("You extract it")

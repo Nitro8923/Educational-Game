@@ -3,6 +3,7 @@ from data import prolouge
 from data import robux_menu
 from data import decryption_levels
 from data import decryption_levels
+from data import epilogue
 from verify_game_files import *
 import time
 import sys
@@ -26,6 +27,8 @@ def main():
     
     if read_value("data/save_values/files_decrypted.txt") == "0":
         decryption_levels.manual_calculator()
+    
+    epilogue.files_decrypted()
 
 
 main()

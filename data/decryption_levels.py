@@ -1,5 +1,8 @@
 from data.helpers import *
 from random import randint
+import sys
+
+sys.dont_write_bytecode = True
 
 def open_decryptor():
     print_blank_wall()
@@ -55,7 +58,7 @@ def manual_calculator():
                 level5()
             else:
                 break
-        elif read_value("data/save_values/hard_mode.txt") == 1:
+        elif read_value("data/save_values/hard_mode.txt") == "1":
             if read_value("data/save_values/hard_decryption_layer1.txt") == "0":
                 hard_level1()
             elif read_value("data/save_values/hard_decryption_layer2.txt") == "0":
@@ -302,14 +305,4 @@ def hard_level5():
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer5.txt", "1")
-
-def files_decrypted():
-    print_blank_wall()
-    gprint("Your files have been decrypted successfully!")
-    gprint("All ransaomware has been removed!")
-    gprint("You have beaten my game! GG!")
-    gprint("You may get to take revenge on the hacker in the sequel.")
-    if choice("Reset game data? y/n: ") == 'y':
-        reset_data()
-
     

@@ -1,6 +1,9 @@
 import time
 import random
 import os
+import sys
+
+sys.dont_write_bytecode = True
 
 def gprint(string="", speed=0.08, end="\n"):
     for character in string:

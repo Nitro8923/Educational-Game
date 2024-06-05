@@ -1,5 +1,8 @@
 from data.helpers import *
 import time
+import sys
+
+sys.dont_write_bytecode = True
 
 def robux_pretext():
     print_blank_wall()
