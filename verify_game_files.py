@@ -3,9 +3,6 @@ import sys
 import shutil
 from data.helpers import *
 import time
-import sys
-
-sys.dont_write_bytecode = True
 
 
 def verify_game_file():

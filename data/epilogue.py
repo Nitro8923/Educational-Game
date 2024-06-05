@@ -1,7 +1,6 @@
 import sys
 from data.helpers import *
 
-sys.dont_write_bytecode = True
 def files_decrypted():
     print_blank_wall()
     gprint("Your files have been decrypted successfully!")

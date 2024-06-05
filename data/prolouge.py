@@ -1,8 +1,6 @@
 from data.helpers import *
 from data.decryption_levels import *
-import sys
 
-sys.dont_write_bytecode = True
 
 def ransomware_startup():
     # introduce ransomware
