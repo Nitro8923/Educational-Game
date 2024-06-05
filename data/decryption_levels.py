@@ -33,13 +33,13 @@ def open_decryptor():
     manual_calculator()
 
 def manual_calculator():
-    # print_blank_wall()
-    # print("---------------------------------------------------------------------------------------------------")
-    # gprint("Hello and welcome to the manual calculation software!")
-    # gprint("We will give you equations to solve")
-    # gprint("You will need to enter the combination of all of the answers to decrypt a layer")
-    # gprint("You will need to decrypt 5 layers to fully decrypt your computer!")
-    # input("Press enter to start decrypting the first layer")
+    print_blank_wall()
+    print("---------------------------------------------------------------------------------------------------")
+    gprint("Hello and welcome to the manual calculation software!")
+    gprint("We will give you equations to solve")
+    gprint("You will need to enter the combination of all of the answers to decrypt a layer")
+    gprint("You will need to decrypt 5 layers to fully decrypt your computer!")
+    input("Press enter to start decrypting the first layer")
     time.sleep(2)
     while(True):
         if read_value("data/save_values/hard_mode.txt") == "0":
@@ -68,6 +68,8 @@ def manual_calculator():
                 hard_level5()
             else:
                 break
+    
+    files_decrypted()
         
     
 def files_decrypted():
@@ -300,3 +302,14 @@ def hard_level5():
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer5.txt", "1")
+
+def files_decrypted():
+    print_blank_wall()
+    gprint("Your files have been decrypted successfully!")
+    gprint("All ransaomware has been removed!")
+    gprint("You have beaten my game! GG!")
+    gprint("You may get to take revenge on the hacker in the sequel.")
+    if choice("Reset game data? y/n: ") == 'y':
+        reset_data()
+
+    
