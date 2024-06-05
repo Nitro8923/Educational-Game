@@ -95,6 +95,8 @@ def level1():
         ans += x + y
     gprint("The code for the first decryption layer is all the answers added together")
     choice(message="Enter code: ", accepted_choices={str(ans)}, use_gprint=True,reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!")
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     gprint("1 Decryption Layer Completed, 4 to go.")
@@ -123,6 +125,8 @@ def level2():
         
     gprint("The code for the first decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     gprint("2 Decryption Layers Completed, 3 more to go.")
@@ -146,6 +150,8 @@ def level3():
         
     gprint("The code for the third decryption layer is all the answers subtracted from 10000")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/decryption_layer3.txt", "1")
@@ -168,6 +174,8 @@ def level4():
         
     gprint("The code for the fourth decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/decryption_layer4.txt", "1")
@@ -189,6 +197,8 @@ def level5():
         print()
         
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/decryption_layer5.txt", "1")
@@ -209,6 +219,8 @@ def hard_level1():
         ans += x + y
     gprint("The code for the first decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer1.txt", "1")
@@ -236,6 +248,8 @@ def hard_level2():
         
     gprint("The code for the first decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer2.txt", "1")
@@ -258,6 +272,8 @@ def hard_level3():
         
     gprint("The code for the third decryption layer is all the answers subtracted from 1000000")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer3.txt", "1")
@@ -280,6 +296,8 @@ def hard_level4():
         
     gprint("The code for the fourth decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer4.txt", "1")
@@ -302,6 +320,8 @@ def hard_level5():
         print()
         
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
+    print()
+    print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
     write_value("data/save_values/hard_decryption_layer5.txt", "1")
