@@ -42,7 +42,7 @@ def manual_calculator():
     gprint("We will give you equations to solve")
     gprint("You will need to enter the combination of all of the answers to decrypt a layer")
     gprint("You will need to decrypt 5 layers to fully decrypt your computer!")
-    input("Press enter to start decrypting the first layer")
+    input("Press enter to start decrypting")
     time.sleep(2)
     while(True):
         if read_value("data/save_values/hard_mode.txt") == "0":
@@ -123,7 +123,7 @@ def level2():
         print()
         print()
         
-    gprint("The code for the first decryption layer is all the answers added together")
+    gprint("The code for the second decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
     print()
     print()
@@ -137,7 +137,7 @@ def level3():
     print()
     gprint("Third layer")
     gprint("5 questions")
-    ans = 10000
+    ans = 1000
     for i in range(5):
         x = randint(1, 10)
         y = randint(1, 10)
@@ -148,12 +148,13 @@ def level3():
         print()
         print()
         
-    gprint("The code for the third decryption layer is all the answers subtracted from 10000")
+    gprint("The code for the third decryption layer is all the answers subtracted from 1000")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
     print()
     print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
+    gprint("3 Decryption Layers Completed, 2 more to go.")
     write_value("data/save_values/decryption_layer3.txt", "1")
 
 def level4():
@@ -165,8 +166,8 @@ def level4():
     for i in range(10):
         x = randint(1, 10)
         y = randint(1, 200)
-        gprint("Q" + str(i + 1) + " " + str(x * y) + " / " + str(y))
-        ans += x
+        gprint("Q" + str(i + 1) + " " + str(x * y) + " / " + str(x))
+        ans += y
 
         input("Press enter for next question")
         print()
@@ -178,6 +179,7 @@ def level4():
     print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
+    gprint("4 Decryption Layers Completed, 1 more to go.")
     write_value("data/save_values/decryption_layer4.txt", "1")
 
 def level5():
@@ -185,7 +187,7 @@ def level5():
     print()
     gprint("Fifth layer")
     gprint("10 questions")
-    ans = 10000
+    ans = 0
     for i in range(10):
         x = randint(1, 1000)
         y = randint(1, 1000)
@@ -195,7 +197,8 @@ def level5():
         input("Press enter for next question")
         print()
         print()
-        
+    
+    gprint("The code for the fifth decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
     print()
     print()
@@ -223,6 +226,7 @@ def hard_level1():
     print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
+    gprint("1 Decryption Layers Completed, 4 more to go.")
     write_value("data/save_values/hard_decryption_layer1.txt", "1")
 
 def hard_level2():
@@ -246,12 +250,13 @@ def hard_level2():
         print()
         print()
         
-    gprint("The code for the first decryption layer is all the answers added together")
+    gprint("The code for the second decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
     print()
     print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
+    gprint("2 Decryption Layers Completed, 3 more to go.")
     write_value("data/save_values/hard_decryption_layer2.txt", "1")
 
 def hard_level3():
@@ -276,6 +281,7 @@ def hard_level3():
     print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
+    gprint("3 Decryption Layers Completed, 2 more to go.")
     write_value("data/save_values/hard_decryption_layer3.txt", "1")
 
 def hard_level4():
@@ -300,6 +306,7 @@ def hard_level4():
     print()
     processing("Breaking decryption layer", num_chars=100)
     gprint("Decryption layer broken")
+    gprint("4 Decryption Layers Completed, 1 more to go.")
     write_value("data/save_values/hard_decryption_layer4.txt", "1")
 
 def hard_level5():
@@ -307,7 +314,7 @@ def hard_level5():
     print()
     gprint("Fifth layer")
     gprint("25 questions")
-    ans = 10000
+    ans = 0
     for i in range(25):
         x = randint(1, 100000)
         y = randint(1, 100000)
@@ -318,7 +325,8 @@ def hard_level5():
         input("Press enter for next question")
         print()
         print()
-        
+    
+    gprint("The code for the fifth decryption layer is all the answers added together")
     choice("Enter code: ", accepted_choices={str(ans)}, reminder=True, reminder_message="Breaking decryption layer....................... \nCode is wrong!", use_gprint=True)
     print()
     print()

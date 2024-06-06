@@ -20,7 +20,7 @@ def main():
     if read_value("data/save_values/started_decryption.txt") == '0':
         prolouge.ransomware_startup()
 
-    if read_value("data/save_values/hard_mode.txt") == "0":
+    if read_value("data/save_values/hard_mode.txt") == "0" and read_value("data/save_values/files_decrypted.txt") == "0":
         prolouge.hard_mode()
     
     if read_value("data/save_values/files_decrypted.txt") == "0":
